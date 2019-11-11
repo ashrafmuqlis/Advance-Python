@@ -5,3 +5,5 @@ https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-
 https://www.datacamp.com/community/tutorials/decision-tree-classification-python
 
 https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
+
+https://medium.com/@belen.sanchez27/predicting-iris-flower-species-with-k-means-clustering-in-python-f6e46806aaee
