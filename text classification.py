@@ -116,7 +116,7 @@ import pandas as pd
 # Import visualization modules
 import matplotlib.pyplot as plt
 import seaborn as sns
-plt.plot(probdist,pred_sentiment)
+plt.plot(pred_sentiment,pred_sentiment)
 plt.xlabel('Prob Dist')
 plt.ylabel('Predicted Sentiment')   
     
@@ -144,7 +144,6 @@ def strip_punctuation(s):
 text2 = strip_punctuation(text)
 ngrams = trigrams(word_tokenize(text2))
 list(ngrams)
-
 
 
 
