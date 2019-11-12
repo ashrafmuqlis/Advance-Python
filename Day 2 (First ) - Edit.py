@@ -136,7 +136,7 @@ wordlist = [w for w in nltk.corpus.words.words('en') if w.islower()]#List the wo
 #The . wildcard symbol matches any single character. Suppose we have room in a crossword puzzle for an 8-letter word with j as its third letter and t as its sixth letter. In place of each blank cell we use a period:
 #Search for 3rd char has 'j' and 7th char has 't' in a 8 letter word
 [w for w in wordlist if re.search('^..j..t..$', w)]
-[re.match('^[a-z]+$',w)]
+[w for w in wordlist if re.match('^[a-z]+$',w)]
 
 
 #Stemming
