@@ -228,7 +228,6 @@ brown_tagged_sents = brown.tagged_sents(categories='news')
 brown_tagged_sents
 
 
-
 #MODULE 3
 
 
@@ -260,18 +259,25 @@ brown.categories()
 text = brown.raw(categories='news')
 
 
+import nltk
+nltk.download('reuters')
 from nltk.corpus import reuters
 reuters.fileids()
 reuters.categories()
+fileid = 'test/16399'
 text = reuters.raw(fileid)
+text1=reuters.raw(categories='zinc')
 reuters.categories(fileid)
 
 
-
+import nltk
+nltk.download('movie_reviews')
 from nltk.corpus import movie_reviews
 movie_reviews.fileids()
 movie_reviews.categories()
+fileid = 'neg/cv956_12547.txt'
 text = movie_reviews.raw(fileid)
+text1= movie_reviews.raw(categories='neg')
 movie_reviews.categories(fileid)
 
 
