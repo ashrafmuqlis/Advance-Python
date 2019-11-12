@@ -169,7 +169,10 @@ for word in sentence_words:
         sentence_words.remove(word)
 
 sentence_words
+
 print("{0:20}{1:20}".format("Word","Lemma"))
+import nltk
+nltk.download('wordnet')
 for word in sentence_words:
     print ("{0:20}{1:20}".format(word,wordnet_lemmatizer.lemmatize(word,pos="v")))
 
