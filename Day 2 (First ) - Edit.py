@@ -179,6 +179,9 @@ for word in sentence_words:
 
 
 #POS
+import nltk
+nltk.download('averaged_perceptron_tagger')
+
 nltk.pos_tag(['cat','cats'])
 nltk.pos_tag(['take','took','taking','taken'])
 nltk.pos_tag(['delicious'])
@@ -205,16 +208,15 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 #is based on The Porter Stemming Algorithm
 stop_words = set(stopwords.words('english'))
-text2=strip_punctuation(text1)
+text2=strip_punctuation(text1) #callback the previous user defined function at line 113
 wordnet_lemmatizer = WordNetLemmatizer()
 word_tokens = nltk.word_tokenize(text2)
 word_tokens1=''.join(c for c in word_tokens if not c.isdigit())
 print(word_tokens1)
 lemmatized_word = [wordnet_lemmatizer.lemmatize(word) for word in word_tokens]
 print (lemmatized_word)
-nltk.pos_tag(text2)
-
-
+print(nltk.pos_tag(lemmatized_word))
+print(nltk.pos_tag(text2))
 
 
 #brown
