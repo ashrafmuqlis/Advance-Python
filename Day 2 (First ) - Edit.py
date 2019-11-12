@@ -284,7 +284,7 @@ movie_reviews.categories(fileid)
 #Frequency distribution by creating our own corpus
 
 from nltk.corpus import PlaintextCorpusReader
-fileid = 'C:/Users/arun/Desktop/ITRAIN/itrain python/Advanced/codes/gaming.txt'
+fileid = 'C:/Users/ITRAIN-12/Desktop/Day 2/gaming.txt'
 my_corpus = PlaintextCorpusReader(fileid, '.*')
 text = my_corpus.raw(fileid)
 text
