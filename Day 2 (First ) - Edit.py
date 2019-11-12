@@ -26,10 +26,12 @@ text1
 vocab1 = sorted(set(text1.lower().split()))
 len(vocab1)
 
+#filter words longer than 5 letters
 for word in vocab1:
     if (len(word)>5):
         print(word)
-               
+
+#alternately...               
 longword = [word for word in vocab1 if len(word)>5]
 longword
 len(longword)
@@ -42,6 +44,17 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 print(len(sent_tokenize(text1)))
 print(len(word_tokenize(text1)))
 
+#Stop Words Example
+import nltk 
+nltk.download('stopwords')
+stop_wrd = set(stopwords.words('english'))
+[word for word in text1 if word not in stop_wrd]
+len([word for word in text1 if word not in stop_wrd])
+
+#Custom Stop Words
+stop_words = ['.',',','a','they','the','his']
+[word for word in text1 if word not in stop_words]
+len([word for word in text1 if word not in stop_words])
 
 
 
