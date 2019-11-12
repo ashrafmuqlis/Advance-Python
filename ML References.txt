@@ -15,3 +15,5 @@ https://blog.ekbana.com/pre-processing-text-in-python-ad13ea544dae
 https://machinelearningmastery.com/clean-text-machine-learning-python/
 
 https://www.datacamp.com/community/tutorials/naive-bayes-scikit-learn
+
+https://www.datacamp.com/community/tutorials/understanding-logistic-regression-python
