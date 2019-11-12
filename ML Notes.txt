@@ -45,3 +45,7 @@ Cor - Correlation = strenght of dependency by point
       (0.9, etc)
 
 NLTK Corpus - NLTK Library of words
+
+NLP / NLTK terms
+
+Stemming, Lemmalization, Parts of Speech, Stop Words
