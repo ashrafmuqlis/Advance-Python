@@ -47,6 +47,7 @@ print(len(word_tokenize(text1)))
 #Stop Words Example
 import nltk 
 nltk.download('stopwords')
+stopwords.words('english')[0:500:25]
 stop_wrd = set(stopwords.words('english'))
 [word for word in text1 if word not in stop_wrd]
 len([word for word in text1 if word not in stop_wrd])
@@ -56,6 +57,8 @@ stop_words = ['.',',','a','they','the','his']
 [word for word in text1 if word not in stop_words]
 len([word for word in text1 if word not in stop_words])
 
+import string
+string.punctuation
 
 
 #Tokenzing
@@ -105,6 +108,7 @@ print(filtered_sentence)
 
 
 # Remove Punctuation from text\
+# User defined funtion to remove punctuation (e.g: strip_punctuation)
 from string import punctuation
 def strip_punctuation(s):
     return ''.join(c for c in s if c not in punctuation)
@@ -125,9 +129,12 @@ print (cleaned_text)
 
 #Regular Expression for detecting Word Patterns
 import re
+import nltk
+nltk.download('words')
 wordlist = [w for w in nltk.corpus.words.words('en') if w.islower()]#List the words in the English Dictionary words
 [w for w in wordlist if re.search('ed$', w)]#List the words in the wordlist ending with ed
 #The . wildcard symbol matches any single character. Suppose we have room in a crossword puzzle for an 8-letter word with j as its third letter and t as its sixth letter. In place of each blank cell we use a period:
+#Search for 3rd char has 'j' and 7th char has 't' in a 8 letter word
 [w for w in wordlist if re.search('^..j..t..$', w)]
 [re.match('^[a-z]+$',w)]
 
