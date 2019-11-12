@@ -9,3 +9,7 @@ https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-mo
 https://medium.com/@belen.sanchez27/predicting-iris-flower-species-with-k-means-clustering-in-python-f6e46806aaee
 
 https://www.datacamp.com/community/tutorials/stemming-lemmatization-python
+
+https://blog.ekbana.com/pre-processing-text-in-python-ad13ea544dae
+
+https://machinelearningmastery.com/clean-text-machine-learning-python/
