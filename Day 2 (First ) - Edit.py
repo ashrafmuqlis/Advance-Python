@@ -295,9 +295,35 @@ distr = nltk.FreqDist(text)
 print(distr.most_common(5))
 
 
-
 #Reuters
 from nltk.corpus import reuters
 fileid='training/9865'
 text=reuters.raw(fileid)
 text
+
+#Load reuters category news
+reuters.fileids()
+reuters.categories()
+fileid = 'test/16399'
+text=reuters.raw(fileid)
+text1=reuters.raw(categories='earn')
+
+#Word tokenizer
+from nltk.tokenize import sent_tokenize, word_tokenize
+text2 = sent_tokenize(text)
+text3 = word_tokenize(text)
+
+#Remove stop words
+stop_wrd = set(stopwords.words('english'))
+[word for word in text3 if word not in stop_wrd]
+    
+#Apply Frequency Distribution
+distr = nltk.FreqDist(text3)
+
+#List the most common 5 words
+print(distr.most_common(5))
+
+wordnet_lemmatizer = WordNetLemmatizer()
+word_tokens = nltk.word_tokenize(text2)
+word_tokens1=''.join(c for c in word_tokens if not c.isdigit())
+print(word_tokens1)
