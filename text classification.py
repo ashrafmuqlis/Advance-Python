@@ -107,8 +107,6 @@ for review in input_reviews:
     print("Predicted sentiment: ", pred_sentiment)
     print("Probability: ", round(probdist.prob(pred_sentiment), 2))
     
-    
-    
 #SCIKIT learn classifiers
 #Logistics Regression
 #Step 1 — Import data analysis and visualization libraries
@@ -118,7 +116,35 @@ import pandas as pd
 # Import visualization modules
 import matplotlib.pyplot as plt
 import seaborn as sns
-%matplotlib inline
+%matplotlib inline    
+    
+
+#Bigrams
+from nltk import bigrams
+from nltk import trigrams
+from nltk.tokenize import word_tokenize
+text = "Dostoevsky, was the son of the doctor"
+ngrams = bigrams(word_tokenize(text))
+list(ngrams)
+ngrams = trigrams(word_tokenize(text))
+list(ngrams)
+
+
+#Exercise
+from nltk import trigrams
+from nltk.tokenize import word_tokenize
+text = """Dostoevsky, was the son of the doctor. His parents were very hard-working..."""
+stop_wrd = set(stopwords.words('english'))
+[word for word in text if text not in stop_wrd]
+from string import punctuation
+def strip_punctuation(s):
+    return ''.join(c for c in s if c not in punctuation)
+text2 = strip_punctuation(text)
+ngrams = trigrams(word_tokenize(text2))
+list(ngrams)
+
+
+
 
     
     
