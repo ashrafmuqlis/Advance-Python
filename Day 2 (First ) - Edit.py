@@ -302,6 +302,7 @@ text=reuters.raw(fileid)
 text
 
 #Load reuters category news
+from nltk.corpus import reuters
 reuters.fileids()
 reuters.categories()
 fileid = 'test/16399'
@@ -322,8 +323,3 @@ distr = nltk.FreqDist(text3)
 
 #List the most common 5 words
 print(distr.most_common(5))
-
-wordnet_lemmatizer = WordNetLemmatizer()
-word_tokens = nltk.word_tokenize(text2)
-word_tokens1=''.join(c for c in word_tokens if not c.isdigit())
-print(word_tokens1)

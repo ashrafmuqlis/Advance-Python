@@ -116,7 +116,9 @@ import pandas as pd
 # Import visualization modules
 import matplotlib.pyplot as plt
 import seaborn as sns
-%matplotlib inline    
+plt.plot(probdist,pred_sentiment)
+plt.xlabel('Prob Dist')
+plt.ylabel('Predicted Sentiment')   
     
 
 #Bigrams
@@ -135,7 +137,7 @@ from nltk import trigrams
 from nltk.tokenize import word_tokenize
 text = """Dostoevsky, was the son of the doctor. His parents were very hard-working..."""
 stop_wrd = set(stopwords.words('english'))
-[word for word in text if text not in stop_wrd]
+[word for word in text if word not in stop_wrd]
 from string import punctuation
 def strip_punctuation(s):
     return ''.join(c for c in s if c not in punctuation)
