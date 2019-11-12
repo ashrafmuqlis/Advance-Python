@@ -1,0 +1,47 @@
+20-80 training machine
+
+Supervised Learning
+
+Classification - value in strings
+
+Regression - use numeric
+
+
+Unsupervised Learning
+
+Clustering - grouping of data points (behavior)
+
+Association - grouping based on rules
+
+ML Steps:
+1) Get Data
+2) Clean and Preprocess Data
+3) Shuffle (Random) Data
+4) Split into Training/Test Data
+5) Set Model Parameters - Learning Rate, 
+                          Loss Function
+                          Optimizer
+6) Training the Model
+7) Evaluate the Model
+8) Use the Model
+
+Scikit Learn (ML)
+^
+Scipy (Scientific Python)
+^
+Pandas (DataFrames)
+^
+Numpy (Numerical Python, Array, List, Set, Number
+       Char, Strings, Dictionary)
+
+NA rule - number of NA values is minimum, it may
+          be droped
+        - number of NA is significant, use mean 
+          value, bfill, ffill 
+
+Cov - Covariance = dependent by percentage % 
+
+Cor - Correlation = strenght of dependency by point
+      (0.9, etc)
+
+NLTK Corpus - NLTK Library of words
