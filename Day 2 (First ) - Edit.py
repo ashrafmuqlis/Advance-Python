@@ -28,6 +28,7 @@ len(vocab1)
 
 # Tokenize special words
 import nltk 
+#nltk.download('punkt')
 nltk.download('all')
 from nltk.tokenize import sent_tokenize, word_tokenize
 print(len(sent_tokenize(text1)))
