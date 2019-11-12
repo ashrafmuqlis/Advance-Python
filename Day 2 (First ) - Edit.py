@@ -26,13 +26,23 @@ text1
 vocab1 = sorted(set(text1.lower().split()))
 len(vocab1)
 
+for word in vocab1:
+    if (len(word)>5):
+        print(word)
+               
+longword = [word for word in vocab1 if len(word)>5]
+longword
+len(longword)
+
 # Tokenize special words
 import nltk 
-#nltk.download('punkt')
-nltk.download('all')
+nltk.download('punkt')
+#nltk.download('all')
 from nltk.tokenize import sent_tokenize, word_tokenize
 print(len(sent_tokenize(text1)))
 print(len(word_tokenize(text1)))
+
+
 
 
 #Tokenzing
