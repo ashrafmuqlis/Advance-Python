@@ -21,3 +21,5 @@ https://www.datacamp.com/community/tutorials/understanding-logistic-regression-p
 https://www.analyticsvidhya.com/blog/2019/07/how-to-build-recommendation-system-word2vec-python/
 
 https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
+
+https://networkx.github.io/documentation/networkx-1.10/reference/drawing.html
