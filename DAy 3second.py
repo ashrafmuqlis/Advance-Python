@@ -87,19 +87,6 @@ R.add_edge('A','B', relation='friend', weight=5)
 nx.draw_networkx(R)
 
 
-#Exercise
-R = nx.DiGraph()
-R.add_edge('Tweet','User', relation='mentions')
-R.add_edge('Tweet','Source', relation='using')
-R.add_edge('Tweet','Link', relation='contains')
-R.add_edge('Tweet','Tweet1', relation='retweets')
-R.add_edge('User1','Tweet', relation='posts')
-R.add_edge('Hashtag','Tweet', relation='tags')
-R.add_edge('Tweet1','Tweet2', relation='reply to')
-R.is_directed()
-nx.draw_networkx(R)
-
-
 
 #Node Atrributes
 G=nx.MultiGraph()

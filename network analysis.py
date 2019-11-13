@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np
 
-data = pd.read_csv('C:/Users/ITRAIN-12/Desktop/Day 3/airlines.csv')
+data = pd.read_csv('C:/Users/arun/Desktop/ITRAIN/itrain python/Advanced/codes/airlines.csv')
 data.shape
 data.dtypes
 # converting sched_dep_time to 'std' - Scheduled time of departure
@@ -25,21 +25,18 @@ nx.algorithms.degree_centrality(FG) # Notice the 3 airports from which all of ou
 nx.density(FG) # Average edge density of the Graphs
 nx.average_shortest_path_length(FG) # Average shortest path length for ALL paths in the Graph
 nx.average_degree_connectivity(FG) # For a node of degree k - What is the average of its neighbours' degree?
-nx.node_connectivity(FG)
-nx.minimum_node_cut(FG)
-nx.edge_connectivity(FG)
-nx.minimum_edge_cut(FG)
+
 
 
 #Let us take the example of JAX and DFW airports:
 
 # Let us find all the paths available
-for path in nx.all_simple_paths(FG, source='JFK', target='DFW'):
+for path in nx.all_simple_paths(FG, source='JAX', target='DFW'):
  print(path)
  # Let us find the dijkstra path from JAX to DFW.
 # You can read more in-depth on how dijkstra works from this resource - https://courses.csail.mit.edu/6.006/fall11/lectures/lecture16.pdf
-dijpath = nx.dijkstra_path(FG, source='JFK', target='DFW')
+dijpath = nx.dijkstra_path(FG, source='JAX', target='DFW')
 dijpath
 # Let us try to find the dijkstra path weighted by airtime (approximate case)
-shortpath = nx.dijkstra_path(FG, source='JFK', target='DFW', weight='air_time')
+shortpath = nx.dijkstra_path(FG, source='JAX', target='DFW', weight='air_time')
 shortpath
