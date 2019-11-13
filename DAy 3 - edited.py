@@ -38,20 +38,20 @@ nx.draw_networkx_edge_labels(G,pos,edge_labels=labels)
 plt.show()                                                 
 
 
-#Exercise
+#Exercise 1
 import networkx as nx
 import matplotlib.pyplot as plt
 Weight_G = nx.Graph() 
 Weight_G.add_node('A',pos=(2,7))             
-Weight_G.add_node('B',pos=(3,6))             
+Weight_G.add_node('B',pos=(2.5,6))             
 Weight_G.add_node('C',pos=(2,5))             
-Weight_G.add_node('D',pos=(1,4))             
-Weight_G.add_node('E',pos=(3,3))             
-Weight_G.add_node('F',pos=(4,4))             
-Weight_G.add_node('G',pos=(4,8))             
-Weight_G.add_node('H',pos=(4,2.333))             
+Weight_G.add_node('D',pos=(1.5,4))             
+Weight_G.add_node('E',pos=(2.5,3))             
+Weight_G.add_node('F',pos=(3,4))             
+Weight_G.add_node('G',pos=(3,7.5))             
+Weight_G.add_node('H',pos=(3,2.333))             
 Weight_G.add_node('I',pos=(2,3))             
-Weight_G.add_node('J',pos=(3,1))             
+Weight_G.add_node('J',pos=(2.5,1))             
 Weight_G.add_edge('A','B', weight = 6)
 Weight_G.add_edge('B','C', weight = 13)
 Weight_G.add_edge('C','F', weight = 21)
@@ -67,6 +67,34 @@ nx.draw_networkx(Weight_G,pos)
 labels = nx.get_edge_attributes(Weight_G,'weight')
 nx.draw_networkx_edge_labels(Weight_G,pos,edge_labels=labels)
 plt.show()
+
+
+#Exercise 2
+import networkx as nx
+from networkx.algorithms import bipartite
+B = nx.Graph()
+B.add_nodes_from(['Keri','Gabriel','Susan','Nate','Abrianna'], bipartite=0) # Add the node attribute "bipartite"
+B.add_nodes_from(['Lucy','Dan','George','Marilyn'], bipartite=1)
+B.add_edges_from([('Keri','Lucy'), ('Keri','Marilyn'), ('Gabriel','Lucy'), ('Gabriel','George'), ('Susan','Marilyn'), ('Nate','Dan'), ('Nate','George'), ('Abrianna','Lucy'), ('Abrianna','George')])
+nx.is_connected(B)
+bipartite.is_bipartite(B)
+bottom_nodes, top_nodes = bipartite.sets(B)
+G = bipartite.projected_graph(B, top_nodes)
+nx.draw_networkx(G)
+
+#Exercise 3
+import networkx as nx
+from networkx.algorithms import bipartite
+B = nx.Graph()
+B.add_nodes_from(['A','B','C','D','E'], bipartite=0) # Add the node attribute "bipartite"
+B.add_nodes_from(['1','2','3','4','5'], bipartite=1)
+B.add_edges_from([('A','1'), ('A','2'), ('A','3'), ('A','4'), ('A','5'), ('B','2'), ('C','3'), ('C','4'), ('C','5'), ('D','4'), ('E','5')])
+nx.is_connected(B)
+bipartite.is_bipartite(B)
+bottom_nodes, top_nodes = bipartite.sets(B)
+G = bipartite.projected_graph(B, top_nodes)
+nx.draw_networkx(G)
+
 
 
 #MULTIGRAPH
@@ -94,6 +122,7 @@ B.add_edges_from([(1,'a'), (1,'b'), (2,'b'), (2,'c'), (3,'c'), (4,'a')])
 nx.is_connected(B)
 bottom_nodes, top_nodes = bipartite.sets(B)
 G = bipartite.projected_graph(B, top_nodes)
+nx.draw_networkx(G)
 #USING panda and matplotlib
 
 import pandas as pd
