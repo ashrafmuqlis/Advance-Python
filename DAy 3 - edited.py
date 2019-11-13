@@ -152,3 +152,52 @@ carac['myvalue'].cat.codes
  
 # Custom the nodes:
 nx.draw(G, with_labels=True, node_color=carac['myvalue'].cat.codes, cmap=plt.cm.Set1, node_size=1500)
+
+
+#Coefficient
+
+import networkx as nx
+G = nx.Graph()
+G.add_edge('A','K')
+G.add_edge('A','B')
+G.add_edge('A','C')
+G.add_edge('B','K')
+G.add_edge('B','A')
+G.add_edge('B','C')
+G.add_edge('C','A')
+G.add_edge('C','B')
+G.add_edge('C','F')
+G.add_edge('C','E')
+G.add_edge('D','E')
+G.add_edge('E','C')
+G.add_edge('E','F')
+G.add_edge('E','H')
+G.add_edge('F','C')
+G.add_edge('F','G')
+#G.add_edge('I','J')
+nx.draw_networkx(G)
+
+#Clustering Coefficient
+#G is a graph, A is a node
+nx.clustering(G,'F')
+
+#Global clustering
+nx.average_clustering(G)
+
+#Global clustering - Transitivity
+nx.transitivity(G)
+
+#Distance
+nx.shortest_path(G,'A','H')
+nx.shortest_path_length(G,'A','H')
+nx.average_shortest_path_length(G)
+nx.diameter(G)
+nx.radius(G)
+
+#Eccentricity
+nx.eccentricity(G)
+
+#Breadth-First Search
+T=nx.bfs_tree(G,'C')
+T.edges()
+nx.draw_networkx(T)
