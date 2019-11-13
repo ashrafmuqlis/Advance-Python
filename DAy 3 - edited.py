@@ -266,3 +266,57 @@ nx.node_connectivity(G)
 nx.minimum_node_cut(G)
 nx.edge_connectivity(G)
 nx.minimum_edge_cut(G)
+
+
+#Exercise
+import networkx as nx
+import matplotlib.pyplot as plt
+G = nx.Graph()
+G.add_edge('A','H')
+G.add_edge('A','G')
+G.add_edge('A','B')
+G.add_edge('B','A')
+G.add_edge('B','C')
+G.add_edge('C','B')
+G.add_edge('C','D')
+G.add_edge('C','E')
+G.add_edge('D','F')
+G.add_edge('D','C')
+G.add_edge('F','D')
+G.add_edge('F','G')
+G.add_edge('F','I')
+G.add_edge('G','A')
+G.add_edge('G','H')
+G.add_edge('G','I')
+G.add_edge('G','F')
+G.add_edge('H','A')
+G.add_edge('H','G')
+degrees = G.degree()
+degree_values = sorted(set(dict(degrees).values()))
+histogram = [list(dict(degrees).values()).count(i) / 
+            float(nx.number_of_nodes(G))
+            for i in degree_values]
+plt.hist(histogram)
+plt.show()
+
+#Exercise
+import networkx as nx
+import matplotlib.pyplot as plt
+G = nx.DiGraph()
+G.add_edge('E','C')
+G.add_edge('C','B')
+G.add_edge('B','A')
+G.add_edge('H','A')
+G.add_edge('H','G')
+G.add_edge('G','A')
+G.add_edge('G','I')
+G.add_edge('G','F')
+G.add_edge('F','D')
+G.add_edge('D','C')
+degrees = G.in_degree()
+degree_values = sorted(set(dict(degrees).values()))
+histogram = [list(dict(degrees).values()).count(i) / 
+            float(nx.number_of_nodes(G))
+            for i in degree_values]
+plt.hist(histogram)
+plt.show()
