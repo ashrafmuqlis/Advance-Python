@@ -42,6 +42,7 @@ nx.draw_networkx(DM)
 
 
 #To create a bipartite graph:
+import networkx as nx
 from networkx.algorithms import bipartite
 B = nx.Graph()
 # Add nodes
